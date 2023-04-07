@@ -14,7 +14,7 @@ interface ModalProps {
   actionLabel: string; // required string representing the label for the modal's primary action button
   disabled?: boolean; // optional boolean indicating whether the primary action button should be disabled
   secondaryAction?: () => void; // optional function to be called when the modal's secondary action button is clicked
-  secondaryLabel?: string; // optional string representing the label for the modal's secondary action button
+  secondaryActionLabel?: string; // optional string representing the label for the modal's secondary action button
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({
   actionLabel,
   disabled,
   secondaryAction,
-  secondaryLabel,
+  secondaryActionLabel,
 }) => {
   const [showModal, setShowModal] = useState(isOpen);
 
@@ -93,8 +93,25 @@ const Modal: React.FC<ModalProps> = ({
               <div className="relative p-6 flex-auto">{body}</div>
               {/* Footer */}
               <div className="flex flex-col gap-2 p-2">
-                <div className="flex flex-row items-center gap-4 w-full">
-                  <Button label="my button"/>
+                <div
+                  className="
+                flex flex-row 
+                items-center 
+                gap-4 
+                w-full"
+                >
+                  {secondaryAction && secondaryActionLabel && (
+                  <Button 
+                  outline
+                  disabled={disabled}
+                  label={secondaryActionLabel}
+                  onClick={handleSecondaryAction} />
+                  )}
+
+                  <Button 
+                  disabled={disabled}
+                  label={actionLabel}
+                  onClick={handleSubmit} />
                 </div>
               </div>
             </div>

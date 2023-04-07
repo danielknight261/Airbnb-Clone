@@ -1,6 +1,7 @@
 Stack to Date:
 
-Next.js latest version, Tail wind, React-icons , Typescript
+Next.js latest version, Tail wind, React-icons , Typescript , Zustand, Axios
+, react-hook-form
 
 Early Hosting - Vercel 
 
