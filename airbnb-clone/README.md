@@ -3,7 +3,7 @@ Stack to Date:
 Next.js latest version, Tail wind, React-icons , Typescript , Zustand, Axios
 , react-hook-form
 
-Early Hosting - Vercel 
+Early Deployment (unfinished working progress) - Vercel Link https://airbnb-clone-a7hrx9q78-danielknight261.vercel.app/ 
 
 Auth: 
 
